@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoEdukasi - Geometri Kelas 7</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>GeoEdukasi</h1>
+            <nav>
+                <a href="#home">Beranda</a>
+                <a href="#materi">Materi</a>
+                <a href="#quiz">Kuis</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="home" class="hero">
+            <h2>Selamat Datang di Dunia Geometri!</h2>
+            <p>Eksplorasi garis, sudut, dan bangun datar dengan cara yang mudah dipahami.</p>
+            <button class="btn primary" onclick="document.getElementById('materi').scrollIntoView()">Mulai Belajar</button>
+        </section>
+
+        <section id="materi" class="content-section">
+            <h3 class="section-title">Modul Pembelajaran Geometri Kelas 7</h3>
+            
+            <div class="module-card" data-module="garis">
+                <h4>Modul 1: Konsep Garis dan Sudut</h4>
+                <p>Mempelajari pengertian titik, garis, bidang, serta jenis-jenis dan hubungan antar sudut.</p>
+                <button class="btn secondary module-btn" data-target="garis-sudut-detail">Pelajari Sekarang</button>
+            </div>
+            
+            <div class="module-card" data-module="bangun-datar">
+                <h4>Modul 2: Bangun Datar (Persegi, Persegi Panjang, Segitiga)</h4>
+                <p>Memahami keliling dan luas bangun datar dasar serta sifat-sifatnya.</p>
+                <button class="btn secondary module-btn" data-target="bangun-datar-detail">Pelajari Sekarang</button>
+            </div>
+        </section>
+
+        <section id="garis-sudut-detail" class="detail-section hidden">
+            <button class="btn back-btn" onclick="showSection('materi')">&larr; Kembali ke Modul</button>
+            <h3>Detail Modul 1: Garis dan Sudut</h3>
+            
+            <h4>1. Pengertian Garis dan Titik</h4>
+            <p>Titik adalah representasi posisi tanpa ukuran. Garis adalah kumpulan titik yang memanjang tak terbatas di kedua arah.</p>
+            
+
+[Image of point, line, and plane]
+
+            
+            <h4>2. Jenis-Jenis Sudut</h4>
+            <div class="interactive-area">
+                <p>Sudut diukur dalam derajat. Klik tombol di bawah untuk melihat jenis sudut:</p>
+                <button class="btn small" onclick="showAngle('lancip')">Sudut Lancip</button>
+                <button class="btn small" onclick="showAngle('siku')">Sudut Siku-Siku</button>
+                <button class="btn small" onclick="showAngle('tumpul')">Sudut Tumpul</button>
+                
+                <div id="angle-display" class="info-box">
+                    Klik salah satu tombol di atas untuk melihat penjelasannya.
+                </div>
+            </div>
+            
+
+[Image of acute, right, and obtuse angles]
+
+        </section>
+
+        <section id="bangun-datar-detail" class="detail-section hidden">
+            <button class="btn back-btn" onclick="showSection('materi')">&larr; Kembali ke Modul</button>
+            <h3>Detail Modul 2: Bangun Datar</h3>
+            
+            <h4>1. Persegi dan Persegi Panjang</h4>
+            <p>Persegi memiliki empat sisi sama panjang, sedangkan persegi panjang memiliki sisi yang berhadapan sama panjang.</p>
+            
+            <div class="formula-box">
+                <p><strong>Persegi:</strong> Keliling $K = 4 \times s$, Luas $L
